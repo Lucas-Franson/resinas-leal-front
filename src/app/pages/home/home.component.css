@@ -1,0 +1,45 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+mat-drawer-container {
+    height: 100%;
+}
+
+/* Sidenav */
+
+mat-drawer {
+    width: 250px;
+    background-color: #f8f9fa;
+}
+
+mat-drawer .title {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 20px;
+}
+
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #5f7b65;
+}
+
+/* toolbar */
+
+mat-toolbar {
+    background: #5f7b65;
+    color: white;
+}
+
+/* content */
+
+mat-card {
+    margin: 20px;
+}
+
+footer.footer-global {
+    padding: 10px;
+    text-align: center;
+}

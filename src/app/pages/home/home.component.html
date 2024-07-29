@@ -1,0 +1,57 @@
+<mat-drawer-container class="container">
+    <mat-drawer #drawer mode="side" [opened]="drawerOpened">
+        <div class="title">
+            <h1 class="anton-regular">RESINAS LEAL</h1>
+        </div>
+        
+        <app-drawer-button routerLink="/dashboard">
+            <mat-icon icon>home</mat-icon>
+            Dashboard
+        </app-drawer-button>
+        <app-drawer-button routerLink="/carga">
+            <mat-icon icon>local_shipping</mat-icon>
+            Carga
+        </app-drawer-button>
+        <app-drawer-button routerLink="/contas-pagar">
+            <mat-icon icon>trending_down</mat-icon>
+            Contas a Pagar
+        </app-drawer-button>
+        <app-drawer-button routerLink="/contas-receber">
+            <mat-icon icon>trending_up</mat-icon>
+            Contas a Receber
+        </app-drawer-button>
+        <app-drawer-button routerLink="/caixa">
+            <mat-icon icon>account_balance</mat-icon>
+            Caixa
+        </app-drawer-button>
+        <app-drawer-button routerLink="/funcionarios">
+            <mat-icon icon>groups</mat-icon>
+            Funcionários
+        </app-drawer-button>
+        <app-drawer-button routerLink="/empresa">
+            <mat-icon icon>store</mat-icon>
+            Empresa
+        </app-drawer-button>
+    </mat-drawer>
+    <mat-drawer-content>
+        <mat-toolbar>
+            <button mat-icon-button (click)="toggleDrawer()" class="example-icon" aria-label="Example icon-button with menu icon">
+                <mat-icon>{{menuIcon}}</mat-icon>
+            </button>
+            <span class="example-spacer"></span>
+            <button mat-icon-button (click)="logout()" class="logout-icon" aria-label="Logout icon">
+                <mat-icon>logout</mat-icon>
+            </button>
+        </mat-toolbar>
+        
+        <mat-card appearance="outlined">
+            <mat-card-content>
+                <router-outlet></router-outlet>
+            </mat-card-content>
+        </mat-card>
+        
+        <footer class="footer-global">
+            <p class="anton-regular">Copyright &copy; Resinas Leal - 2024</p>
+        </footer>
+    </mat-drawer-content>
+</mat-drawer-container> 

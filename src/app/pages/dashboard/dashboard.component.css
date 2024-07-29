@@ -1,0 +1,9 @@
+.left-tile ::ng-deep.mat-grid-tile-content{
+    display: flex;
+    align-items: flex-start;
+} 
+
+.chart-line {
+    width: 100%;
+    height: 100%;
+}

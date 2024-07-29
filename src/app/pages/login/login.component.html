@@ -1,0 +1,47 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            <h1 class="anton-regular">Resinas Leal</h1>
+        </mat-card-title>	
+    </mat-card-header>
+    <mat-card-content>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input
+                matInput
+                placeholder="pat@examplo.com"
+                [formControl]="email"
+                (blur)="updateErrorEmailMessage()"
+                required
+                />
+                @if (email.invalid) {
+                <mat-error>{{errorEmailMessage()}}</mat-error>
+                }
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Senha</mat-label>
+                <input 
+                    matInput 
+                    [formControl]="password"
+                    [type]="hide() ? 'password' : 'text'"
+                    (blur)="updateErrorPasswordMessage()"
+                    required 
+                />
+                @if (email.invalid) {
+                    <mat-error>{{errorPasswordMessage()}}</mat-error>
+                }
+                <button
+                mat-icon-button
+                matSuffix
+                (click)="clickEvent($event)"
+                [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide()"
+                >
+                <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+            <button type="submit" mat-flat-button>Entrar</button>
+        </form>
+    </mat-card-content>
+</mat-card>
