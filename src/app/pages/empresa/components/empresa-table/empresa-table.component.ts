@@ -13,7 +13,7 @@ import { MatTableDataSource, MatTableModule } from '@angular/material/table';
   styleUrl: './empresa-table.component.css'
 })
 export class EmpresaTableComponent {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'actions'];
+  displayedColumns: string[] = ['position', 'razaoSocial', 'cnpj', 'parceiro', 'actions'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -24,15 +24,16 @@ export class EmpresaTableComponent {
 }
 
 export interface PeriodicElement {
-  name: string;
+  razaoSocial: string;
   position: number;
-  weight: number;
-  symbol: string;
+  cnpj: string;
+  parceiro: string;
   actions: string;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H', actions: ''},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He', actions: ''},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li', actions: ''},
+  {position: 1, razaoSocial: 'Resinas de Paula', cnpj: '98.418.791/0001-79', parceiro: 'Sim', actions: ''},
+  {position: 2, razaoSocial: 'Resinas Leal', cnpj: '98.418.791/0001-12', parceiro: 'Sim', actions: ''},
+  {position: 3, razaoSocial: 'Resinas João', cnpj: '98.418.791/0001-56', parceiro: 'Não', actions: ''},
 ];
+
