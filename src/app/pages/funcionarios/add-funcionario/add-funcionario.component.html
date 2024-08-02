@@ -1,0 +1,103 @@
+<mat-card-header>	
+    <h1>Funcionário</h1>
+</mat-card-header>
+<form [formGroup]="funcionarioForm" (ngSubmit)="onSubmit()">
+    <div class="form-input">
+        <mat-form-field class="mat-1" appearance="outline">
+            <mat-label>Código</mat-label>
+            <input [formControl]="codigo" required matInput>
+            @if (codigo.invalid) {
+                <mat-error>{{errorCodigoMessage()}}</mat-error>
+            }
+        </mat-form-field>
+        <mat-form-field class="mat-1" appearance="outline">
+            <mat-label>Nome</mat-label>
+            <input [formControl]="nome" required matInput>
+            @if (nome.invalid) {
+                <mat-error>{{errorNomeMessage()}}</mat-error>
+            }
+        </mat-form-field>
+        <mat-form-field class="mat-1" appearance="outline">
+            <mat-label>Equipe</mat-label>
+            <input [formControl]="equipe" required matInput>
+            @if (equipe.invalid) {
+                <mat-error>{{errorEquipeMessage()}}</mat-error>
+            }
+        </mat-form-field>
+        <mat-divider class="mat-3"></mat-divider>
+        <mat-form-field class="mat-1" appearance="outline">
+            <mat-label>Vale</mat-label>
+            <span matTextPrefix>R$ &nbsp;</span>
+            <input type="number" [formControl]="vale" matNativeControl matInput>
+        </mat-form-field>
+        <mat-form-field class="mat-1" appearance="outline">
+            <mat-label>Farmácia</mat-label>
+            <span matTextPrefix>R$ &nbsp;</span>
+            <input type="number" [formControl]="farmacia" matInput>
+        </mat-form-field>
+        <mat-form-field class="mat-1" appearance="outline">
+            <mat-label>Antecipação</mat-label>
+            <span matTextPrefix>R$ &nbsp;</span>
+            <input type="number" [formControl]="antecipacao" matInput>
+        </mat-form-field>
+        <mat-form-field class="mat-1" appearance="outline">
+            <mat-label>Produção</mat-label>
+            <span matTextPrefix>R$ &nbsp;</span>
+            <input type="number" [formControl]="producao" matInput>
+        </mat-form-field>
+        <mat-form-field class="mat-1" appearance="outline">
+            <mat-label>S.F.</mat-label>
+            <span matTextPrefix>R$ &nbsp;</span>
+            <input type="number" [formControl]="sf" matInput>
+        </mat-form-field>
+        <mat-form-field class="mat-1" appearance="outline">
+            <mat-label>Cesta</mat-label>
+            <span matTextPrefix>R$ &nbsp;</span>
+            <input type="number" [formControl]="cesta" matInput>
+        </mat-form-field>
+        <mat-form-field class="mat-1" appearance="outline">
+            <mat-label>Atestado</mat-label>
+            <span matTextPrefix>R$ &nbsp;</span>
+            <input type="number" [formControl]="atestado" matInput>
+        </mat-form-field>
+        <mat-form-field class="mat-1" appearance="outline">
+            <mat-label>INSS (desconto)</mat-label>
+            <span matTextPrefix>R$ &nbsp;</span>
+            <input type="number" [formControl]="inss" matInput>
+        </mat-form-field>
+        <mat-form-field class="mat-1" appearance="outline">
+            <mat-label>Extra</mat-label>
+            <span matTextPrefix>R$ &nbsp;</span>
+            <input type="number" [formControl]="extra" matInput>
+        </mat-form-field>
+        <mat-divider class="mat-3"></mat-divider>
+        <div class="mat-1"></div>
+        <mat-form-field class="mat-1" appearance="outline">
+            <mat-label>Soma Total Holerite</mat-label>
+            <span matTextPrefix>R$ &nbsp;</span>
+            <input matInput type="number" [formControl]="total">
+        </mat-form-field>
+        <mat-form-field class="mat-1" appearance="outline">
+            <mat-label>Valor Deposito</mat-label>
+            <span matTextPrefix>R$ &nbsp;</span>
+            <input type="number" [formControl]="depositado" matInput>
+        </mat-form-field>
+        <mat-form-field class="mat-1" appearance="outline">
+            <mat-label>Obs. Holerite</mat-label>
+            <textarea [formControl]="obsHolerite" matInput placeholder="..."></textarea>
+        </mat-form-field>
+        <mat-form-field class="mat-1" appearance="outline">
+            <mat-label>Obs. Escritório</mat-label>
+            <textarea [formControl]="obsEscritorio" matInput placeholder="..."></textarea>
+        </mat-form-field>
+        <mat-form-field class="mat-1" appearance="outline">
+            <mat-label>Observação / Antecipação</mat-label>
+            <textarea [formControl]="obsAntecipacao" matInput placeholder="..."></textarea>
+        </mat-form-field>
+    </div>
+    <section>
+        <div class="addBtn">
+            <button type="submit" mat-flat-button>Adicionar</button>
+        </div>
+    </section>
+</form>

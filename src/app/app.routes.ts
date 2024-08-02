@@ -8,6 +8,7 @@ import { ContasReceberComponent } from './pages/contas-receber/contas-receber.co
 import { CaixaComponent } from './pages/caixa/caixa.component';
 import { FuncionariosComponent } from './pages/funcionarios/funcionarios.component';
 import { EmpresaComponent } from './pages/empresa/empresa.component';
+import { AddFuncionarioComponent } from './pages/funcionarios/add-funcionario/add-funcionario.component';
 
 export const routes: Routes = [
     {
@@ -41,6 +42,10 @@ export const routes: Routes = [
             {
                 path: 'funcionarios',
                 component: FuncionariosComponent
+            },
+            {
+                path: 'funcionario',
+                component: AddFuncionarioComponent
             },
             {
                 path: 'empresa',
