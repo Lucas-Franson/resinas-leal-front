@@ -8,6 +8,7 @@ import { ContasReceberComponent } from './pages/contas-receber/contas-receber.co
 import { CaixaComponent } from './pages/caixa/caixa.component';
 import { FuncionariosComponent } from './pages/funcionarios/funcionarios.component';
 import { EmpresaComponent } from './pages/empresa/empresa.component';
+import { AddContasPagarComponent } from './pages/contas-pagar/add-contas-pagar/add-contas-pagar.component';
 
 export const routes: Routes = [
     {
@@ -29,6 +30,10 @@ export const routes: Routes = [
             {
                 path: 'contas-pagar',
                 component: ContasPagarComponent
+            },
+            {
+                path: 'add-contas-pagar',
+                component: AddContasPagarComponent
             },
             {
                 path: 'contas-receber',
