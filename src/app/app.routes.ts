@@ -6,6 +6,7 @@ import { ContasPagarComponent } from './pages/contas-pagar/contas-pagar.componen
 import { ContasReceberComponent } from './pages/contas-receber/contas-receber.component';
 import { FuncionariosComponent } from './pages/funcionarios/funcionarios.component';
 import { EmpresaComponent } from './pages/empresa/empresa.component';
+import { AddFuncionarioComponent } from './pages/funcionarios/add-funcionario/add-funcionario.component';
 
 import { AddContasPagarComponent } from './pages/contas-pagar/add-contas-pagar/add-contas-pagar.component';
 
@@ -48,6 +49,10 @@ export const routes: Routes = [
             {
                 path: 'funcionarios',
                 component: FuncionariosComponent
+            },
+            {
+                path: 'funcionario',
+                component: AddFuncionarioComponent
             },
             {
                 path: 'empresa',
