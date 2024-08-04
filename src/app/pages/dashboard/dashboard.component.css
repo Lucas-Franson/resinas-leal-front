@@ -1,9 +1,34 @@
-.left-tile ::ng-deep.mat-grid-tile-content{
+/* mat-grid-tile ::ng-deep.mat-grid-tile-content{
     display: flex;
     align-items: flex-start;
-} 
+}  */
 
-.chart-line {
+.responsive-div {
     width: 100%;
     height: 100%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 600px) {
+    .row {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 20px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .row {
+        display: flex;
+        flex-direction: row;
+    }
 }
