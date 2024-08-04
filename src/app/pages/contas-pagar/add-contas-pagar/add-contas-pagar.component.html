@@ -1,0 +1,58 @@
+<mat-card-header>	
+    <h1>Contas a Pagar</h1>
+</mat-card-header>
+<form [formGroup]="contasPagarForm" (ngSubmit)="onSubmit()">
+    <div class="form-input">
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Fornecedor</mat-label>
+                <input [formControl]="fornecedor" required matInput>
+                @if (fornecedor.invalid) {
+                    <mat-error>{{errorFornecedorMessage()}}</mat-error>
+                }
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Vencimento</mat-label>
+                <input [formControl]="vencimento" matInput>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Valor</mat-label>
+                <span matTextPrefix>R$ &nbsp;</span>
+                <input type="number" [formControl]="valor" matInput>
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Data Emissão</mat-label>
+                <input [formControl]="dataEmissao" matInput>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Nº Documento</mat-label>
+                <input [formControl]="noDocumento" matInput>
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Histórico</mat-label>
+                <textarea [formControl]="historico" matInput placeholder="..."></textarea>
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Categoria</mat-label>
+                <input [formControl]="categoria" matInput>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Ocorrência</mat-label>
+                <input [formControl]="ocorrencia" matInput>
+            </mat-form-field>
+        </div>
+    </div>
+    <section>
+        <div class="addBtn">
+            <button type="submit" mat-flat-button>Adicionar</button>
+        </div>
+    </section>
+</form>
