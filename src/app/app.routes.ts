@@ -6,11 +6,11 @@ import { ContasPagarComponent } from './pages/contas-pagar/contas-pagar.componen
 import { ContasReceberComponent } from './pages/contas-receber/contas-receber.component';
 import { FuncionariosComponent } from './pages/funcionarios/funcionarios.component';
 import { EmpresaComponent } from './pages/empresa/empresa.component';
+import { EstoqueComponent } from './pages/estoque/estoque.component';
 import { AddFuncionarioComponent } from './pages/funcionarios/add-funcionario/add-funcionario.component';
-
 import { AddContasPagarComponent } from './pages/contas-pagar/add-contas-pagar/add-contas-pagar.component';
-
 import { AddContasReceberComponent } from './pages/contas-receber/add-contas-receber/add-contas-receber.component';
+
 
 
 export const routes: Routes = [
