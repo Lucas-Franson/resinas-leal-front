@@ -12,8 +12,13 @@ import { MatTableDataSource, MatTableModule } from '@angular/material/table';
   styleUrl: './agenda-table.component.css'
 })
 export class AgendaTableComponent implements AfterViewInit {
-  displayedColumns: string[] = ['nome', 'descricao', 'data'];
+  displayedColumns: string[] = ['nome', 'valor', 'vencimento'];
   dataSource = new MatTableDataSource<Agenda>(ELEMENT_DATA);
+
+  totalVal = ELEMENT_DATA
+    .map(t => parseInt(t.valor.replace('R$ ', '')))
+    .reduce((acc, value) => acc + value, 0)
+    .toFixed(2);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
@@ -25,16 +30,14 @@ export class AgendaTableComponent implements AfterViewInit {
 export interface Agenda {
   id: number;
   nome: string;
-  descricao: string;
-  data: string;
+  valor: string;
+  vencimento: string;
 }
 
 const ELEMENT_DATA: Agenda[] = [
-  {id: 1, nome: 'Reunião', descricao: 'Reunião de alinhamento', data: '2021-10-01'},
-  {id: 2, nome: 'Entrega', descricao: 'Entrega de projeto', data: '2021-10-02'},
-  {id: 3, nome: 'Apresentação', descricao: 'Apresentação de resultados', data: '2021-10-03'},
-  {id: 4, nome: 'Reunião', descricao: 'Reunião de alinhamento', data: '2021-10-04'},
-  {id: 5, nome: 'Entrega', descricao: 'Entrega de projeto', data: '2021-10-05'},
-  {id: 6, nome: 'Reunião', descricao: 'Reunião de alinhamento', data: '2021-10-06'},
-  {id: 7, nome: 'Entrega', descricao: 'Entrega de projeto', data: '2021-10-07'}
+  {id: 1, nome: 'Hydrogen', valor: 'R$ 10,00', vencimento: '01/01/2021'},
+  {id: 2, nome: 'Helium', valor: 'R$ 20,00', vencimento: '01/01/2021'},
+  {id: 3, nome: 'Lithium', valor: 'R$ 30,00', vencimento: '01/01/2021'},
+  {id: 4, nome: 'Beryllium', valor: 'R$ 40,00', vencimento: '01/01/2021'},
+  {id: 5, nome: 'Boron', valor: 'R$ 50,00', vencimento: '01/01/2021'}
 ];

@@ -1,15 +1,26 @@
 
-<mat-grid-list cols="2" rowHeight="4:3">
-    <mat-grid-tile>
+<!-- <mat-grid-list cols="2" rowHeight="4:3">
+    <mat-grid-tile class="responsive-tile">
         <div class="chart-line">
             <h3>Lucro Semanal</h3>
             <app-chart-line></app-chart-line>
         </div>
     </mat-grid-tile>
-    <mat-grid-tile class="left-tile">
+    <mat-grid-tile class="responsive-tile">
         <div>
-            <h3>Agenda</h3>
+            <h3>Contas da Semana</h3>
             <app-agenda-table></app-agenda-table>
         </div>
     </mat-grid-tile>
-</mat-grid-list>
+</mat-grid-list> -->
+
+<div class="row">
+    <div class="responsive-div">
+        <h3>Lucro Semanal</h3>
+        <app-chart-line></app-chart-line>
+    </div>
+    <div class="responsive-div">
+        <h3>Contas da Semana</h3>
+        <app-agenda-table></app-agenda-table>
+    </div>
+</div>

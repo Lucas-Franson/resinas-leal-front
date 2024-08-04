@@ -8,7 +8,11 @@ import { ContasReceberComponent } from './pages/contas-receber/contas-receber.co
 import { CaixaComponent } from './pages/caixa/caixa.component';
 import { FuncionariosComponent } from './pages/funcionarios/funcionarios.component';
 import { EmpresaComponent } from './pages/empresa/empresa.component';
+
 import { AddContasPagarComponent } from './pages/contas-pagar/add-contas-pagar/add-contas-pagar.component';
+
+import { AddContasReceberComponent } from './pages/contas-receber/add-contas-receber/add-contas-receber.component';
+
 
 export const routes: Routes = [
     {
@@ -40,6 +44,10 @@ export const routes: Routes = [
                 component: ContasReceberComponent
             },
             {
+                path: 'add-contas-receber',
+                component: AddContasReceberComponent
+            },
+            {
                 path: 'caixa',
                 component: CaixaComponent
             }, 
@@ -50,6 +58,10 @@ export const routes: Routes = [
             {
                 path: 'empresa',
                 component: EmpresaComponent
+            },
+            {
+                path: 'estoque',
+                component: EstoqueComponent
             }
         ]
     },
