@@ -1,0 +1,34 @@
+<mat-card-header>	
+    <h1>Fazenda</h1>
+</mat-card-header>
+<form [formGroup]="fazendaForm" (ngSubmit)="onSubmit()">
+    <div class="form-input">
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Proprietário</mat-label>
+                <input [formControl]="proprietario" required matInput>
+                @if (proprietario.invalid) {
+                    <mat-error>{{errorProprietarioMessage()}}</mat-error>
+                }
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Nome</mat-label>
+                <input [formControl]="nome" required matInput>
+                @if (nome.invalid) {
+                    <mat-error>{{errorNomeMessage()}}</mat-error>
+                }
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <button type="button" mat-raised-button (click)="fileInput.click()">Choose File</button>
+            <input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
+        </div>
+    </div>
+    <section>
+        <div class="addBtn">
+            <button type="submit" mat-flat-button>Adicionar</button>
+        </div>
+    </section>
+</form>
