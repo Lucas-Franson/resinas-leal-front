@@ -1,0 +1,12 @@
+table {
+    width: 100%;
+} 
+
+.actions {
+    width: 15%;
+}
+
+.actions button {
+    margin-right: 5px;
+    cursor: pointer;
+}
