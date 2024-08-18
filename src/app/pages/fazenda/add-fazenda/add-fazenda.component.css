@@ -1,0 +1,32 @@
+mat-card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
+}
+
+@media screen and (min-width: 600px) {
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }
+}
+
+mat-form-field {
+    width: 100%;
+    margin: 0 10px;
+}
+
+.addBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
