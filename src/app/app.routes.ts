@@ -12,6 +12,8 @@ import { AddContasPagarComponent } from './pages/contas-pagar/add-contas-pagar/a
 import { AddContasReceberComponent } from './pages/contas-receber/add-contas-receber/add-contas-receber.component';
 import { PedidoComponent } from './pages/pedido/pedido.component';
 import { AddPedidoComponent } from './pages/pedido/add-pedido/add-pedido.component';
+import { FazendaComponent } from './pages/fazenda/fazenda.component';
+import { AddFazendaComponent } from './pages/fazenda/add-fazenda/add-fazenda.component';
 
 
 
@@ -67,7 +69,16 @@ export const routes: Routes = [
             {
                 path: 'add-pedido',
                 component: AddPedidoComponent
-            }
+            },
+            {
+                path: 'fazenda',
+                component: FazendaComponent
+            },
+            {
+                path: 'add-fazenda',
+                component: AddFazendaComponent
+            },
+
         ]
     },
     {
