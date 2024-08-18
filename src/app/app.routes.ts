@@ -10,6 +10,8 @@ import { EstoqueComponent } from './pages/estoque/estoque.component';
 import { AddFuncionarioComponent } from './pages/funcionarios/add-funcionario/add-funcionario.component';
 import { AddContasPagarComponent } from './pages/contas-pagar/add-contas-pagar/add-contas-pagar.component';
 import { AddContasReceberComponent } from './pages/contas-receber/add-contas-receber/add-contas-receber.component';
+import { PedidoComponent } from './pages/pedido/pedido.component';
+import { AddPedidoComponent } from './pages/pedido/add-pedido/add-pedido.component';
 
 
 
@@ -19,7 +21,7 @@ export const routes: Routes = [
         component: LoginComponent
     },
     {
-        path: '',
+        path: 'sistema',
         component: HomeComponent,
         children: [
             {
@@ -43,15 +45,11 @@ export const routes: Routes = [
                 component: AddContasReceberComponent
             },
             {
-                path: 'caixa',
-                component: CaixaComponent
-            }, 
-            {
                 path: 'funcionarios',
                 component: FuncionariosComponent
             },
             {
-                path: 'funcionario',
+                path: 'add-funcionario',
                 component: AddFuncionarioComponent
             },
             {
@@ -61,6 +59,14 @@ export const routes: Routes = [
             {
                 path: 'estoque',
                 component: EstoqueComponent
+            },
+            {
+                path: 'pedido',
+                component: PedidoComponent
+            },
+            {
+                path: 'add-pedido',
+                component: AddPedidoComponent
             }
         ]
     },

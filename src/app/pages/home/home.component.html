@@ -4,28 +4,32 @@
             <h1 class="anton-regular">RESINAS LEAL</h1>
         </div>
         
-        <app-drawer-button routerLink="/dashboard">
+        <app-drawer-button routerLink="/sistema/dashboard">
             <mat-icon icon>home</mat-icon>
             Dashboard
         </app-drawer-button>
-        <app-drawer-button routerLink="/contas-pagar">
+        <app-drawer-button routerLink="/sistema/pedido">
+            <mat-icon icon>local_shipping</mat-icon>
+            Pedido
+        </app-drawer-button>
+        <app-drawer-button routerLink="/sistema/contas-pagar">
             <mat-icon icon>trending_down</mat-icon>
             Contas a Pagar
         </app-drawer-button>
-        <app-drawer-button routerLink="/contas-receber">
+        <app-drawer-button routerLink="/sistema/contas-receber">
             <mat-icon icon>trending_up</mat-icon>
             Contas a Receber
         </app-drawer-button>
-        <app-drawer-button routerLink="/funcionarios">
+        <app-drawer-button routerLink="/sistema/funcionarios">
             <mat-icon icon>groups</mat-icon>
             Funcionários
         </app-drawer-button>
-        <app-drawer-button routerLink="/empresa">
+        <app-drawer-button routerLink="/sistema/empresa">
             <mat-icon icon>store</mat-icon>
             Empresa
         </app-drawer-button>
-        <app-drawer-button routerLink="/estoque">
-            <mat-icon icon>store</mat-icon>
+        <app-drawer-button routerLink="/sistema/estoque">
+            <mat-icon icon>inventory_2</mat-icon>
             Estoque
         </app-drawer-button>
     </mat-drawer>
