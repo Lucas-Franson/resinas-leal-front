@@ -1,0 +1,50 @@
+<mat-card-header>	
+    <h1>Estoque</h1>
+</mat-card-header>
+<form [formGroup]="estoqueForm" (ngSubmit)="onSubmit()">
+    <div class="form-input">
+        <mat-form-field class="mat-1" appearance="outline">
+            <mat-label>Produto</mat-label>
+            <input [formControl]="produto" required matInput>
+            @if (produto.invalid) {
+                <mat-error>{{errorCodigoMessage()}}</mat-error>
+            }
+        </mat-form-field>
+
+        <mat-form-field class="mat-1" appearance="outline">
+            <mat-label>Código</mat-label>
+            <input [formControl]="codigo" required matInput>
+            @if (codigo.invalid) {
+                <mat-error>{{errorNomeMessage()}}</mat-error>
+            }
+        </mat-form-field>
+
+        <mat-form-field class="mat-1" appearance="outline">
+            <mat-label>Valor</mat-label>
+            <span matTextPrefix>R$ &nbsp;</span>
+            <input type="decimal" [formControl]="valor" matNativeControl matInput>
+        </mat-form-field>
+
+        <mat-divider class="mat-3"></mat-divider>
+        <mat-form-field class="mat-1" appearance="outline">
+            <mat-label>Custo</mat-label>
+            <span matTextPrefix>R$ &nbsp;</span>
+            <input type="decimal" [formControl]="custo" matNativeControl matInput>
+        </mat-form-field>
+
+        <mat-form-field class="mat-1" appearance="outline">
+            <mat-label>Estoque Físico</mat-label>
+            <input type="number" [formControl]="estoqueFisico" matInput>
+        </mat-form-field>
+
+        <mat-form-field class="mat-1" appearance="outline">
+            <mat-label>Unidade</mat-label>
+            <input type="number" [formControl]="unidade" matInput>
+        </mat-form-field>        
+    </div>
+    <section>
+        <div class="addBtn">
+            <button type="submit" mat-flat-button>Adicionar</button>
+        </div>
+    </section>
+</form>

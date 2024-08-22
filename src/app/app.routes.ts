@@ -14,6 +14,7 @@ import { PedidoComponent } from './pages/pedido/pedido.component';
 import { AddPedidoComponent } from './pages/pedido/add-pedido/add-pedido.component';
 import { FazendaComponent } from './pages/fazenda/fazenda.component';
 import { AddFazendaComponent } from './pages/fazenda/add-fazenda/add-fazenda.component';
+import { AddEstoqueComponent } from './pages/estoque/add-estoque/add-estoque.component';
 
 
 
@@ -78,7 +79,10 @@ export const routes: Routes = [
                 path: 'add-fazenda',
                 component: AddFazendaComponent
             },
-
+            {
+                path: 'add-estoque',
+                component: AddEstoqueComponent
+            },
         ]
     },
     {

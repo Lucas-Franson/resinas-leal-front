@@ -10,6 +10,7 @@
                 <mat-error>{{errorCodigoMessage()}}</mat-error>
             }
         </mat-form-field>
+
         <mat-form-field class="mat-1" appearance="outline">
             <mat-label>Nome</mat-label>
             <input [formControl]="nome" required matInput>
@@ -17,83 +18,68 @@
                 <mat-error>{{errorNomeMessage()}}</mat-error>
             }
         </mat-form-field>
+
         <mat-form-field class="mat-1" appearance="outline">
             <mat-label>Equipe</mat-label>
             <input [formControl]="equipe" required matInput>
             @if (equipe.invalid) {
                 <mat-error>{{errorEquipeMessage()}}</mat-error>
             }
-        </mat-form-field>
+        </mat-form-field>        
+
         <mat-divider class="mat-3"></mat-divider>
         <mat-form-field class="mat-1" appearance="outline">
-            <mat-label>Vale</mat-label>
-            <span matTextPrefix>R$ &nbsp;</span>
-            <input type="number" [formControl]="vale" matNativeControl matInput>
+            <mat-label>Dt Nascimento</mat-label>
+            <input type="date" [formControl]="dataNascimento" matNativeControl matInput>
         </mat-form-field>
+
         <mat-form-field class="mat-1" appearance="outline">
-            <mat-label>Farmácia</mat-label>
-            <span matTextPrefix>R$ &nbsp;</span>
-            <input type="number" [formControl]="farmacia" matInput>
+            <mat-label>Conta Corrente</mat-label>
+            <input type="number" [formControl]="contaCorrente" matInput>
         </mat-form-field>
+
         <mat-form-field class="mat-1" appearance="outline">
-            <mat-label>Antecipação</mat-label>
-            <span matTextPrefix>R$ &nbsp;</span>
-            <input type="number" [formControl]="antecipacao" matInput>
-        </mat-form-field>
+            <mat-label>Agência</mat-label>
+            <input type="number" [formControl]="agencia" matInput>
+        </mat-form-field>       
+
         <mat-form-field class="mat-1" appearance="outline">
-            <mat-label>Produção</mat-label>
-            <span matTextPrefix>R$ &nbsp;</span>
-            <input type="number" [formControl]="producao" matInput>
-        </mat-form-field>
+            <mat-label>Rede Bancária</mat-label>
+            <input [formControl]="nomeBanco" required matInput>
+            @if (nomeBanco.invalid) {
+                <mat-error>{{errorEquipeMessage()}}</mat-error>
+            }
+        </mat-form-field> 
+
         <mat-form-field class="mat-1" appearance="outline">
-            <mat-label>S.F.</mat-label>
-            <span matTextPrefix>R$ &nbsp;</span>
-            <input type="number" [formControl]="sf" matInput>
-        </mat-form-field>
+            <mat-label>Logradouro</mat-label>
+            <input [formControl]="logradouro" required matInput>
+            @if (logradouro.invalid) {
+                <mat-error>{{errorEquipeMessage()}}</mat-error>
+            }
+        </mat-form-field> 
+
         <mat-form-field class="mat-1" appearance="outline">
-            <mat-label>Cesta</mat-label>
-            <span matTextPrefix>R$ &nbsp;</span>
-            <input type="number" [formControl]="cesta" matInput>
+            <mat-label>Bairro</mat-label>
+            <input [formControl]="bairro" required matInput>
+            @if (bairro.invalid) {
+                <mat-error>{{errorEquipeMessage()}}</mat-error>
+            }
         </mat-form-field>
+
         <mat-form-field class="mat-1" appearance="outline">
-            <mat-label>Atestado</mat-label>
-            <span matTextPrefix>R$ &nbsp;</span>
-            <input type="number" [formControl]="atestado" matInput>
+            <mat-label>Cidade</mat-label>
+            <input [formControl]="cidade" required matInput>
+            @if (cidade.invalid) {
+                <mat-error>{{errorEquipeMessage()}}</mat-error>
+            }
         </mat-form-field>
+
         <mat-form-field class="mat-1" appearance="outline">
-            <mat-label>INSS (desconto)</mat-label>
-            <span matTextPrefix>R$ &nbsp;</span>
-            <input type="number" [formControl]="inss" matInput>
+            <mat-label>Observação</mat-label>
+            <input [formControl]="observacao" required matInput>
         </mat-form-field>
-        <mat-form-field class="mat-1" appearance="outline">
-            <mat-label>Extra</mat-label>
-            <span matTextPrefix>R$ &nbsp;</span>
-            <input type="number" [formControl]="extra" matInput>
-        </mat-form-field>
-        <mat-divider class="mat-3"></mat-divider>
-        <div class="mat-1"></div>
-        <mat-form-field class="mat-1" appearance="outline">
-            <mat-label>Soma Total Holerite</mat-label>
-            <span matTextPrefix>R$ &nbsp;</span>
-            <input matInput type="number" [formControl]="total">
-        </mat-form-field>
-        <mat-form-field class="mat-1" appearance="outline">
-            <mat-label>Valor Deposito</mat-label>
-            <span matTextPrefix>R$ &nbsp;</span>
-            <input type="number" [formControl]="depositado" matInput>
-        </mat-form-field>
-        <mat-form-field class="mat-1" appearance="outline">
-            <mat-label>Obs. Holerite</mat-label>
-            <textarea [formControl]="obsHolerite" matInput placeholder="..."></textarea>
-        </mat-form-field>
-        <mat-form-field class="mat-1" appearance="outline">
-            <mat-label>Obs. Escritório</mat-label>
-            <textarea [formControl]="obsEscritorio" matInput placeholder="..."></textarea>
-        </mat-form-field>
-        <mat-form-field class="mat-1" appearance="outline">
-            <mat-label>Observação / Antecipação</mat-label>
-            <textarea [formControl]="obsAntecipacao" matInput placeholder="..."></textarea>
-        </mat-form-field>
+       
     </div>
     <section>
         <div class="addBtn">
